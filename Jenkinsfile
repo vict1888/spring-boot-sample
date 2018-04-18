@@ -12,5 +12,10 @@ pipeline {
         junit 'target/surefire-reports/*.xml'
       }
     }
+    stage('Package') {
+      steps {
+        sh 'mvn package'
+      }
+    }
   }
 }
